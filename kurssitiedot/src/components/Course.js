@@ -1,16 +1,20 @@
-import Header from './Header'
-import Part from './Part'
-import Total from './Total'
 import React from 'react'
+import Header from './Header'
+import Total from './Total'
+import Part from './Part'
 
-const Course = ({ course }) => {
+
+const Course = ({ courses }) => {
   return (
     <>
-    <Header course={course} />
-    <Part course={course} />
-    <Total course={course} />
+    <Header courses={courses} />
+    <Part courses={courses} />
+    
     </>
   )
 }
+
+/* <Part courses={courses} />
+    <Total courses={courses} /> */
 
 export default Course

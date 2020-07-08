@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Header = ({ course }) => {
+const Header = ({ courses }) => {
     return (
-        <h1>{course.name}</h1>
+        courses.map(courses => <h1 key={courses.id}>{courses.name}</h1>)
     )
 } 
 

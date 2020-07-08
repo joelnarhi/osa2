@@ -1,10 +1,17 @@
 import React from 'react'
 
-const Part = ({ course }) => {
+const Part = ({ courses }) => {
+  
+  const parts = courses.map((parts) => parts)
+  console.log('Part', parts)
+
   return (
-       course.parts.map(part => 
+       parts.map(part => 
         <p key={part.id}>{part.name} {part.exercises}</p>)
   )
 }
+/*
+courses.map(courses => <h1 key={courses.id}>{courses.name}</h1>)
+*/
 
 export default Part
