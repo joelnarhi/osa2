@@ -1,20 +1,20 @@
 import React from 'react'
 import Header from './Header'
-import Total from './Total'
-import Part from './Part'
 
 
-const Course = ({ courses }) => {
+const Course= ({ courses }) => {
+
   return (
-    <>
-    <Header courses={courses} />
-    <Part courses={courses} />
-    
-    </>
+  courses.map((courses, i) => (
+  <>
+    <h2 key={i}>{courses.name}</h2>
+    {courses.parts.map((c, i) => (
+      <p key={i}>{c.name} {c.exercises}</p>
+    ))}
+    <p>Total of {courses.parts.map((number) => number.exercises).reduce((a,b) => a + b)} courses</p>
+  </>
+  ))
   )
 }
-
-/* <Part courses={courses} />
-    <Total courses={courses} /> */
 
 export default Course
